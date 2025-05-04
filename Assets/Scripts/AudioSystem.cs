@@ -1,15 +1,28 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-
+/*Debe haber un menú de configuración donde el usuario pueda ajustar el Audio utilizando 3
+canales: Master, Music y SFX. Debe usar AudioMixer y su configuración de grupos. Este
+menú debe ser un Singleton y mantenerse entre las escenas.*/
 public class AudioSystem : MonoBehaviour
 {
     #region Privates
     [SerializeField] private AudioMixer audioMixer;
     [SerializeField] private AudioSettingsData audioSettingsData;
+    public static AudioSystem Instance;
     #endregion
-    private void Start()
+
+    private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
         //al empezar se aplica los valores guardados
         Volumen(audioSettingsData.masterVolume);
         VolumenMusic(audioSettingsData.musicVolume);

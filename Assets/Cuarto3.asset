@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5101d83a23c51b49bcc55b5d243ca1c, type: 3}
+  m_Name: Cuarto3
+  m_EditorClassIdentifier: 
+  musicClip: {fileID: 8300000, guid: 3f5bc4d43d2e501499fdebf29498c0d9, type: 3}
+  enterSFX: {fileID: 8300000, guid: 6b141aec686b8e341a414a1e754b2313, type: 3}
+  exitSFX: {fileID: 8300000, guid: f44f45d06c1b88340b6a83af6a75bd39, type: 3}
+  musicMixer: {fileID: -1106217495068132956, guid: bd213cd25ece83b40b82670b2f0f4596, type: 2}
+  sfxMixer: {fileID: 4285055569305592972, guid: bd213cd25ece83b40b82670b2f0f4596, type: 2}
